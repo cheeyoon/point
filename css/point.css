@@ -42,6 +42,7 @@
 }
 
 .home {
+  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -141,7 +142,6 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 100vh;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -webkit-flex-direction: row;
@@ -160,7 +160,7 @@
 
 .quoteauthor {
   color: #fff;
-  font-size: 24px;
+  font-size: 14px;
   text-align: right;
 }
 
@@ -340,6 +340,13 @@
   display: block;
 }
 
+.featurevids.stream {
+  left: auto;
+  top: -7%;
+  right: 0px;
+  bottom: 0px;
+}
+
 .opacity {
   position: absolute;
   z-index: 1;
@@ -357,6 +364,8 @@
 .testimonial {
   margin-bottom: 50px;
   color: #fff;
+  font-size: 24px;
+  line-height: 36px;
 }
 
 .utility-page-wrap {
@@ -408,6 +417,31 @@
   align-items: stretch;
 }
 
+.mainlogo {
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-left: 5px;
+  float: left;
+}
+
+.downarrow {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 5%;
+  display: block;
+  width: 15px;
+  height: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  border-bottom: 3px solid #fff;
+  border-left: 3px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  cursor: pointer;
+}
+
 html.w-mod-js *[data-ix="fade-up-1"] {
   opacity: 0;
   -webkit-transform: translate(0px, 100px);
@@ -437,6 +471,9 @@ html.w-mod-js *[data-ix="fade-up-4"] {
 }
 
 @media (max-width: 991px) {
+  .bgvid {
+    left: -50%;
+  }
   .div {
     margin: 100px 50px;
   }
@@ -465,14 +502,11 @@ html.w-mod-js *[data-ix="fade-up-4"] {
     margin-bottom: 10px;
   }
   .home {
-    height: 900px;
+    height: auto;
   }
   .div.feature {
     margin-right: 40px;
     margin-left: 40px;
-  }
-  .quote {
-    height: 900px;
   }
   .column {
     padding-right: 0px;
@@ -480,6 +514,7 @@ html.w-mod-js *[data-ix="fade-up-4"] {
   }
   .stattext {
     margin-bottom: 50px;
+    text-align: center;
   }
   .stattext.nomargin {
     margin-bottom: 0px;
@@ -490,9 +525,17 @@ html.w-mod-js *[data-ix="fade-up-4"] {
   .opacity {
     height: 2700px;
   }
+  .mainlogo {
+    height: 40px;
+    margin-right: 15px;
+    margin-left: 0px;
+  }
 }
 
 @media (max-width: 479px) {
+  .bgvid {
+    left: -100%;
+  }
   .home {
     overflow: hidden;
   }
@@ -517,11 +560,20 @@ html.w-mod-js *[data-ix="fade-up-4"] {
     display: flex;
     height: 50px;
   }
+  .stattext {
+    text-align: left;
+  }
   .stattext.nomargin.exception {
-    margin-bottom: 25px;
+    margin-bottom: 50px;
   }
   .featurevids {
     left: -80%;
+  }
+  .featurevids.stream {
+    right: -20%;
+  }
+  .mainlogo {
+    margin-bottom: 15px;
   }
 }
 

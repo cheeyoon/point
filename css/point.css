@@ -71,6 +71,13 @@
   margin-left: 100px;
 }
 
+.div.testimony {
+  display: block;
+  max-width: 940px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .rowlogo {
   display: -webkit-box;
   display: -webkit-flex;
@@ -160,7 +167,8 @@
 
 .quoteauthor {
   color: #fff;
-  font-size: 14px;
+  font-size: 24px;
+  line-height: 36px;
   text-align: right;
 }
 
@@ -170,6 +178,7 @@
 }
 
 .subtitle {
+  display: inline-block;
   margin-bottom: 25px;
   font-size: 24px;
   font-weight: 700;
@@ -184,13 +193,7 @@
   background-image: linear-gradient(180deg, #fff, #fff);
 }
 
-.columnfeature1 {
-  position: relative;
-  overflow: hidden;
-  height: 450px;
-}
-
-.columnfeature2 {
+.columnfeature {
   position: relative;
   overflow: hidden;
   height: 450px;
@@ -198,30 +201,6 @@
 
 .white {
   color: #fff;
-}
-
-.columnfeature3 {
-  position: relative;
-  overflow: hidden;
-  height: 450px;
-}
-
-.columnfeature4 {
-  position: relative;
-  overflow: hidden;
-  height: 450px;
-}
-
-.columnfeature5 {
-  position: relative;
-  overflow: hidden;
-  height: 450px;
-}
-
-.columnfeature6 {
-  position: relative;
-  overflow: hidden;
-  height: 450px;
 }
 
 .link {
@@ -341,6 +320,7 @@
 }
 
 .featurevids.stream {
+  position: absolute;
   left: auto;
   top: -7%;
   right: 0px;
@@ -364,8 +344,7 @@
 .testimonial {
   margin-bottom: 50px;
   color: #fff;
-  font-size: 24px;
-  line-height: 36px;
+  line-height: 24px;
 }
 
 .utility-page-wrap {
@@ -417,13 +396,6 @@
   align-items: stretch;
 }
 
-.mainlogo {
-  margin-top: 20px;
-  margin-right: 20px;
-  margin-left: 5px;
-  float: left;
-}
-
 .downarrow {
   position: absolute;
   left: 0px;
@@ -440,6 +412,39 @@
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
   cursor: pointer;
+}
+
+.slider {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+
+.slidenav {
+  margin-bottom: 50px;
+  font-size: 7px;
+}
+
+.arrowicon {
+  font-size: 24px;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  background-color: #fff;
+}
+
+.brand {
+  margin-top: 20px;
+}
+
+.icon {
+  display: inline-block;
+  margin-right: 10px;
+  font-family: Fontawesome, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
 }
 
 html.w-mod-js *[data-ix="fade-up-1"] {
@@ -481,12 +486,30 @@ html.w-mod-js *[data-ix="fade-up-4"] {
     margin-right: 50px;
     margin-left: 50px;
   }
+  .div.testimony {
+    width: 80%;
+  }
   .footerdiv {
     margin-right: 50px;
     margin-left: 50px;
   }
   .featurevids {
     left: -50%;
+  }
+  .brand {
+    margin-top: 17px;
+  }
+  .brand.w--current {
+    margin-left: 20px;
+  }
+  .navmenu {
+    background-color: #fff;
+  }
+  .menubutton.w--open {
+    background-color: transparent;
+  }
+  .menuicon {
+    color: #000;
   }
 }
 
@@ -500,6 +523,9 @@ html.w-mod-js *[data-ix="fade-up-4"] {
   }
   .text.nomargin {
     margin-bottom: 10px;
+  }
+  .text.marginbottom {
+    margin-bottom: 0px;
   }
   .home {
     height: auto;
@@ -525,10 +551,8 @@ html.w-mod-js *[data-ix="fade-up-4"] {
   .opacity {
     height: 2700px;
   }
-  .mainlogo {
-    height: 40px;
-    margin-right: 15px;
-    margin-left: 0px;
+  .brand.w--current {
+    margin-left: 10px;
   }
 }
 
@@ -538,6 +562,9 @@ html.w-mod-js *[data-ix="fade-up-4"] {
   }
   .home {
     overflow: hidden;
+  }
+  .div.testimony {
+    width: 70%;
   }
   .rowlogo {
     display: block;
@@ -572,11 +599,26 @@ html.w-mod-js *[data-ix="fade-up-4"] {
   .featurevids.stream {
     right: -20%;
   }
-  .mainlogo {
-    margin-bottom: 15px;
-  }
 }
 
+@font-face {
+  font-family: 'Fontawesome';
+  src: url('../fonts/fa-solid-900.woff2') format('woff2'), url('../fonts/fa-solid-900.eot') format('embedded-opentype'), url('../fonts/fa-solid-900.woff') format('woff'), url('../fonts/fa-solid-900.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Fontawesome';
+  src: url('../fonts/fa-light-300.woff2') format('woff2'), url('../fonts/fa-light-300.eot') format('embedded-opentype'), url('../fonts/fa-light-300.woff') format('woff'), url('../fonts/fa-light-300.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Fontawesome';
+  src: url('../fonts/fa-regular-400.woff2') format('woff2'), url('../fonts/fa-regular-400.eot') format('embedded-opentype'), url('../fonts/fa-regular-400.woff') format('woff'), url('../fonts/fa-regular-400.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
 @font-face {
   font-family: 'Avenir Next';
   src: url('../fonts/AvenirNextLTPro-It.otf') format('opentype');
